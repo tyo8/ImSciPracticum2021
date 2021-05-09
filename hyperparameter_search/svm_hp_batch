@@ -1,0 +1,8 @@
+#PBS -N tst_domaps -l nodes=1:ppn=32,mem=20gb,walltime=127:00:00
+#PBS -o svm_hp_batch.o
+#PBS -e svm_hp_batch.e
+
+module load matlab
+
+cd /scratch/tyo8teasley/ImSciPracticum/IDPs_SVM
+matlab svm_hyperpar_optim_search
